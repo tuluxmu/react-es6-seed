@@ -1,0 +1,15 @@
+@import "variables";
+@import "prefixer";
+@import "mixins";
+
+.foo {
+    color: red;
+
+    .bar {
+        color: green;
+    }
+
+    &:after {
+        color: grey;
+    }
+}
