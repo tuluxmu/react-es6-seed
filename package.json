@@ -1,7 +1,7 @@
 {
-  "name": "react-seed",
-  "version": "1.0.0",
-  "description": "基于React.js的前端项目脚手架",
+  "name": "react-es6-seed",
+  "version": "0.0.1",
+  "description": "A boilerplate for building webapp with React, ES6, Sass and pack with webpack.",
   "main": "",
   "config": {
     "devPort": 8088,
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.meizu.com/fife/react-seed.git"
+    "url": "https://github.com/chemdemo/react-es6-seed.git"
   },
   "author": "dmyang",
   "bugs": {
-    "url": "http://gitlab.meizu.com/fife/react-seed/issues"
+    "url": "https://github.com/chemdemo/react-es6-seed/issues"
   },
-  "homepage": "http://gitlab.meizu.com/fife/react-seed",
+  "homepage": "https://github.com/chemdemo/react-es6-seed",
   "dependencies": {
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
