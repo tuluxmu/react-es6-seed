@@ -4,15 +4,17 @@ A boilerplate for building webapp with React, ES6 and pack with webpack.
 
 ## Features
 
-- React.js and ECMAScript 6 support
+- React.js and ES6 ECMAScript 6 support
+
+- SASS & LESS & native css support
+
+- [Local CSS](https://github.com/webpack/css-loader#local-scope) support
 
 - Support SPA & multi-pages apps
 
 - Build apps with webpack and HRM support
 
-- SASS and [Local CSS](https://github.com/webpack/css-loader#local-scope) support
-
-- Mock data and proxy api support
+- Support data mock and 3rd domain api proxy
 
 ## Getting start
 
