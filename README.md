@@ -34,11 +34,11 @@ $ npm install -g webpack gulp
 
 - `$ npm run install` - install 3rd modules
 
-- `$ npm run start` - start the app in development mode at http://localhost:8088
+- `$ npm start` - start the app in development mode at http://localhost:8088
 
-- `$ npm run build` - build with webpack
+- `$ npm build` - build with webpack
 
-- `$ npm run release` - start the app in production mode to check the assets resource
+- `$ npm release` - start the app in production mode to check the assets resource
 
 ### Mock & Proxy
 

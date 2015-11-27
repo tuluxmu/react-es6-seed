@@ -2,7 +2,7 @@
  * @Author: dmyang
  * @Date:   2015-06-29 18:42:30
  * @Last Modified by:   dmyang
- * @Last Modified time: 2015-11-26 19:20:31
+ * @Last Modified time: 2015-11-27 14:54:07
  */
 
 'use strict';
@@ -102,5 +102,5 @@ app.listen(port, host, function() {
 
     console.log('Listening at %s', url);
 
-    opn(url);
+    opn(url + '/a.html');
 });
