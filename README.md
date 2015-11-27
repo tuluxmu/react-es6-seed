@@ -42,7 +42,7 @@ $ npm install -g webpack gulp
 
 ### Mock & Proxy
 
-It lanuch a local HTTP server to serve static files, so it's easy supporting mock data and proxy 3rd api, see `routes.js`.
+It lanuch a local HTTP server to serve static files, so it's easy supporting mock data and proxy 3rd ajax api, see `routes.js`.
 
 The webpack-dev-server launched as middleware of the local server.
 
