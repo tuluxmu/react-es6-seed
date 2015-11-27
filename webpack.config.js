@@ -2,7 +2,7 @@
  * @Author: dmyang
  * @Date:   2015-08-02 14:16:41
  * @Last Modified by:   dmyang
- * @Last Modified time: 2015-11-26 18:19:48
+ * @Last Modified time: 2015-11-27 14:04:40
  */
 
 'use strict';
@@ -33,7 +33,9 @@ var plugins = [
         minChunks: chunks.length
     })
 ];
+var cssLoader;
 var sassLoader;
+var lessLoader;
 var jsxLoader = [];
 var sassParams = [
     'outputStyle=expanded',
@@ -42,26 +44,28 @@ var sassParams = [
 ];
 
 if (debug) {
+    var cssLoaderStr = 'css?sourceMap&modules&localIdentName=[name]-[local]-[hash:base64:5]';
+
+    cssLoader = ['style', cssLoaderStr].join('!');
+
     sassParams.push('sourceMap', 'sourceMapContents=true')
-    sassLoader = [
-        'style',
-        'css?sourceMap&modules&localIdentName=[name]-[local]-[hash:base64:5]',
-        'sass?' + sassParams.join('&')
-    ].join('!');
+    sassLoader = ['style', cssLoaderStr, 'sass?' + sassParams.join('&')].join('!');
+
+    lessLoader = ['style', cssLoaderStr, 'less'].join('!');
 
     // jsxLoader.push('react-hot');
 
     plugins.push(new webpack.HotModuleReplacementPlugin());
 } else {
+    cssLoader = ['style', 'css'].join('!');
+
     // sassLoader = ExtractTextPlugin.extract('style', [
     //     'css',
     //     'sass?' + sassParams.join('&')
     // ].join('!'));
-    sassLoader = [
-        'style',
-        'css',
-        'sass?' + sassParams.join('&')
-    ].join('!');
+    sassLoader = ['style', 'css', 'sass?' + sassParams.join('&')].join('!');
+
+    lessLoader = ['style', 'css', 'less'].join('!');
 
     plugins.push(
         new UglifyJsPlugin(),
@@ -162,6 +166,14 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: sassLoader
+            },
+            {
+                test: /\.less$/,
+                loader: 'srtle!css!less'
+            },
+            {
+                test: /\.css$/,
+                loader: 'srtle!css'
             },
             {
                 test: /\.jsx?$/,
