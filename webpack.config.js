@@ -2,7 +2,7 @@
  * @Author: dmyang
  * @Date:   2015-08-02 14:16:41
  * @Last Modified by:   dmyang
- * @Last Modified time: 2015-11-27 14:04:40
+ * @Last Modified time: 2015-11-30 11:39:40
  */
 
 'use strict';
@@ -80,7 +80,7 @@ jsxLoader.push('babel?presets[]=react,presets[]=es2015');
 genHtml();
 
 function genEntries() {
-    var jsDir = path.resolve(srcDir, 'pages/');
+    var jsDir = path.resolve(srcDir, 'containers/');
     var names = fs.readdirSync(jsDir);
     var map = {};
 
